@@ -7,4 +7,4 @@
 
 ### Build
 * rpmbuild -bs --nodeps --define "_sourcedir ." --define "_srcrpmdir ." go.spec
-* sudo mock <the SRPM you built>
+* sudo mock [the SRPM you built]
