@@ -2,7 +2,7 @@
 
 ### Setup
 * hg clone -u release https://go.googlecode.com/hg/ go
-* tar -zcvf go-`cat go/VERSION`.tar.gz go
+* tar -zcvf `cat go/VERSION`.tar.gz go
 * Update the version number from go/VERSION in go.spec
 
 ### Build

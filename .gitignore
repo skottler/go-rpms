@@ -1,1 +1,3 @@
-*.src.rpm
+*.rpm
+*.tar.gz
+go/*

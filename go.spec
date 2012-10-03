@@ -1,11 +1,11 @@
 Name:          go
-Version:       1.0.2
+Version:       1.0.3
 Release:       1%{?dist}
 Summary:       Compiler for the Go language from Google
 Group:         Development/Languages
 License:       BSD
 URL:           http://golang.org/
-Source0:       %{name}-%{version}.tar.gz
+Source0:       %{name}%{version}.tar.gz
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: ed
 BuildRequires: mercurial
@@ -89,5 +89,7 @@ rm -rf %{buildroot}
 %{_bindir}/cgo
 
 %changelog
+* Wed Oct 3 2012 Sam Kottler <sam@kottlerdevelopment.com> - 2012102012
+- Updated to 1.0.3
 * Sat Aug 11 2012 Sam Kottler <sam@kottlerdevelopment.com> - 20120811
 - Initial creation of the Go package
