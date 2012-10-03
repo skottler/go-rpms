@@ -40,7 +40,7 @@ export MAKE=%{__make}
 mkdir -p "$GOBIN"
 cd src
 
-LC_ALL=C PATH="$PATH:$GOBIN" ./all.bash
+LC_ALL=C PATH="$PATH:$GOBIN" ./make.bash
 
 %install
 rm -rf %{buildroot}
