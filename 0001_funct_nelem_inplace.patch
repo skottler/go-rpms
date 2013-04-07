@@ -1,0 +1,12 @@
+diff -r 2d8bc3c94ecb src/cmd/cc/funct.c
+--- a/src/cmd/cc/funct.c	Fri Sep 21 17:10:44 2012 -0500
++++ b/src/cmd/cc/funct.c	Sat Apr 06 23:31:02 2013 -0400
+@@ -269,7 +269,7 @@
+ 		goto bad;
+ 
+ 	f = alloc(sizeof(*f));
+-	for(o=0; o<sizeof(f->sym); o++)
++	for(o=0; o<nelem(f->sym); o++)
+ 		f->sym[o] = S;
+ 
+ 	t->funct = f;
