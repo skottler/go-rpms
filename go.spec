@@ -6,6 +6,7 @@ Group:         Development/Languages
 License:       BSD
 URL:           http://golang.org/
 Source0:       %{name}%{version}.tar.gz
+Patch0:        0001_funct_nelem_inplace.patch
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: ed
 BuildRequires: mercurial
@@ -28,6 +29,7 @@ Go is a systems programming language that aims to be both fast and convenient.
 
 %prep
 %setup -q -n go
+%patch0 -p1
 
 %build
 export GOSRC="$(pwd)"
