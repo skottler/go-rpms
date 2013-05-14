@@ -42,8 +42,6 @@ cd src
 LC_ALL=C PATH="$PATH:$GOBIN" ./make.bash
 
 %install
-rm -rf %{buildroot}
-
 export GOROOT_FINAL=%{_libdir}/go
 export GOROOT="%{buildroot}%{_libdir}/go"
 export GOOS=linux
@@ -72,11 +70,7 @@ for tool in 6a 6c 6g 6l; do
 ln -sf %{_libdir}/go/pkg/tool/linux_%{GOARCH}/$tool %{buildroot}%{_bindir}/$tool
 done
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root,-)
 %{_libdir}/go
 %ifarch %ix86
 %{_bindir}/8*
