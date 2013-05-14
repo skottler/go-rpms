@@ -1,13 +1,12 @@
 # It's build time, baby!
 
 ### Setup
-* hg clone -u release https://go.googlecode.com/hg/ go
-* tar -zcvf `cat go/VERSION`.tar.gz go
-* Update the version number from go/VERSION in go.spec
+* `./make-srpm.sh`
 
 ### Build
-* rpmbuild -bs --nodeps --define "_sourcedir ." --define "_srcrpmdir ." go.spec
-* sudo mock [the SRPM you built]
+* `sudo mock -r *.src.rpm`
+
+# Notice
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -18,6 +17,7 @@ You may obtain a copy of the License at
 ## License and Authors
 
 * Sam Kottler <shk@linux.com>
+* Ricky Elrod <ricky@elrod.me>
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
